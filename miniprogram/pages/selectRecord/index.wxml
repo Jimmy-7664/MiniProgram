@@ -1,0 +1,21 @@
+<view>
+  <view class="top_tip">实验结果：</view>
+  <view  wx:if="{{record}}" class="code_box">
+    <view class="code_box_title">实验结果统计</view>
+    <view class="code_box_record">
+      <view class="code_box_record_title">robot</view>
+      <view class="code_box_record_title">human</view>
+      <view class="code_box_record_title">result</view>
+    </view>
+    <view class="line"></view>
+    <view class="code_box_record" wx:for="{{record}}" wx:key="_id">
+      <view class="code_box_record_detail">{{item.robot}}</view>
+      <view class="code_box_record_detail">{{item.human}}</view>
+      <view class="code_box_record_detail">{{item.result}}</view>
+    </view>
+  </view>
+  <view class="button" bindtap="getRecord" wx:if="{{!haveGetRecord}}">查询记录</view>
+  <!-- <view class="button_clear" bindtap="clearRecord" wx:if="{{haveGetRecord}}">清空</view>
+  <view class="tip">在”资源管理器>cloudfunctions>quickstartFunctions>selectRecord>index.js“找到查询记录函数，体验该能力</view> -->
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
+</view>

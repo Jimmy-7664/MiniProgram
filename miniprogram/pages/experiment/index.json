@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "实验中",
+  "usingComponents": {
+    "cloud-tip-modal": "/components/cloudTipModal/index"
+  }
+}

@@ -1,0 +1,6 @@
+<view class="page">
+  <view class="title">实验介绍</view>
+  <view class="title">和机器人对视，选择是否撞车</view>
+
+  <image class="img" src="../../images/crash.gif"></image>
+</view>

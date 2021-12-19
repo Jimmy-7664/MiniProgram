@@ -1,0 +1,1 @@
+"D:\Jimmy\微信web开发者工具\cli.bat" cloud functions deploy --e jimmy-gao-622a98 --n quickstartFunctions --r --project "D:\Desktop\MiniProgram" --report_first && "D:\Jimmy\微信web开发者工具\cli.bat" cloud functions deploy --e doudizhu-6g1xqgjt69b7c72f --n quickstartFunctions --r --project "D:\Desktop\MiniProgram" --report
