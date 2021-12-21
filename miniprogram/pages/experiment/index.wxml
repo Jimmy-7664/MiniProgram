@@ -1,15 +1,14 @@
 <view>
   <view class="top_tip">请选择是否避让</view>
-  <image class="img" src="../../images/robot_mutual.png"></image>
+  <view class="imgs">
+    <image class="img" src="../../images/robot_mutual.png"></image>
+  </view>
   <view class="tip">Big brother is watching you!</view>
   <view class="ght">
     <view class="button" bindtap="Avoiding" data-page="{{true}}">避让</view>
     <view class="button" bindtap="NotAvoiding" data-page="{{true}}">不避让</view>
   </view>
   <view class="button" bindtap="exit">退出实验</view>
-
-
-
 
   <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
 </view>

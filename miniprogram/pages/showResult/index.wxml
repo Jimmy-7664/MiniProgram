@@ -1,10 +1,10 @@
 <view>
-  <view class="top_tip">hhhhh</view>
+  <!-- <view class="top_tip">hhhhh</view> -->
   <view class="tip">撞车了</view>
-  <image class="img" src="../../images/crash.gif"></image>
+  <view class="imgs">
+  <image class="img" src="../../images/碰撞.gif"></image>
+</view>
   <view class="button" bindtap="goBack" >继续实验</view>
-
-
-
+  
   <cloud-tip-modal showUploadTipProps="{{showUploadTip}}"></cloud-tip-modal>
 </view>

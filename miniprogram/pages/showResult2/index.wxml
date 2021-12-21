@@ -1,7 +1,11 @@
 <view>
-  <view class="top_tip">hhhhh</view>
+  <!-- <view class="top_tip">hhhhh</view> -->
   <view class="tip">无事发生</view>
-  <image class="img" src="../../images/safe.gif"></image>
+  <view class="imgs">
+  <image class="img" src="../../images/躲避1.gif" wx:if="{{type==1}}"></image>
+  <image class="img" src="../../images/躲避2.gif" wx:if="{{type==2}}"></image>
+  <image class="img" src="../../images/躲避3.gif" wx:if="{{type==3}}"></image>
+</view>
   <view class="button" bindtap="goBack" >继续实验</view>
 
 
