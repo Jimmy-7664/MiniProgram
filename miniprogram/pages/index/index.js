@@ -36,11 +36,11 @@ Page({
       //   title: '更新记录',
       //   page: 'updateRecord'
       // }, {
-        title: '查询记录',
-        page: 'selectRecord',
-        jump: false
+      //   title: '查询记录',
+      //   page: 'selectRecord',
+      //   jump: false
 
-      }, {
+      // }, {
         title: '进行实验',
         page: ['experiment','experiment2'],
         jump: true
