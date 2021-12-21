@@ -92,7 +92,6 @@ Page({
       });
       wx.hideLoading();
     });
-    console.log(e);
     wx.navigateTo({
       url: `/pages/showResult/index?envId=jimmy-gao-622a98`,
     });

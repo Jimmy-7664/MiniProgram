@@ -10,7 +10,7 @@
   font-size: 28rpx;
   color: rgba(0, 0, 0, 0.5);
   width: 90%;
-  text-align: left;
+  text-align: center;
   margin-top: 30rpx;
   margin-left: 20rpx;
 }
@@ -80,4 +80,8 @@
   height: 1rpx;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ght {
+  display: flex;
 }

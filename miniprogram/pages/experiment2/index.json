@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "生成小程序码",
+  "navigationBarTitleText": "实验中",
   "usingComponents": {
     "cloud-tip-modal": "/components/cloudTipModal/index"
   }

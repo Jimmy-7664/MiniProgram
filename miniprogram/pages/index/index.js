@@ -30,16 +30,20 @@ Page({
       showItem: false,
       item: [{
         title: '实验介绍',
-        page: 'createCollection'
+        page: 'createCollection',
+        jump: false
       }, {
       //   title: '更新记录',
       //   page: 'updateRecord'
       // }, {
         title: '查询记录',
-        page: 'selectRecord'
+        page: 'selectRecord',
+        jump: false
+
       }, {
         title: '进行实验',
-        page: 'experiment'
+        page: ['experiment','experiment2'],
+        jump: true
       }
     ]}],
     // }, {
@@ -106,12 +110,36 @@ Page({
   },
 
   jumpPage(e) {
+    // console.log(e.currentTarget.dataset.page.jump);
+
+    if (e.currentTarget.dataset.page.jump) {
+
+      let rand1=Math.random();
+      console.log(rand1);
+
+      if (rand1 < 0.5) {
+        wx.navigateTo({
+          url: `/pages/${e.currentTarget.dataset.page.page[0]}/index?envId=${this.data.selectedEnv.envId}`,
+        });
+      } else {
+        wx.navigateTo({
+          url: `/pages/${e.currentTarget.dataset.page.page[1]}/index?envId=${this.data.selectedEnv.envId}`,
+        });
+      }
+
+    } else {
+      wx.navigateTo({
+        url: `/pages/${e.currentTarget.dataset.page}/index?envId=${this.data.selectedEnv.envId}`,
+      });
+    }
+
+  },
+  jumpPage2(e) {
     console.log(e);
     wx.navigateTo({
-      url: `/pages/${e.currentTarget.dataset.page}/index?envId=${this.data.selectedEnv.envId}`,
+      url: `/pages/${e.currentTarget.dataset.page[1]}/index?envId=${this.data.selectedEnv.envId}`,
     });
   },
-
   onClickDatabase(powerList) {
     wx.showLoading({
       title: '',
