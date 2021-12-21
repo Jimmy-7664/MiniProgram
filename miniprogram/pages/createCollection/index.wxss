@@ -1,6 +1,6 @@
 page {
   background-color: white;
-  padding-bottom: 50px;
+  height: 100%;
 }
 
 .page {
@@ -8,11 +8,23 @@ page {
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 16px;
-  font-size: 17px;
+  flex-direction: column;
   font-family: PingFang SC;
   font-weight: 500;
-  color: #000000;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 16px; */
+  /* flex-direction: column;
+  font-family: PingFang SC;
+  font-weight: 500; */
 }
 
 .info {
@@ -20,10 +32,27 @@ page {
   font-size: 17px;
   font-family: PingFang SC;
   font-weight: 400;
-  color: #000000;
+  color: #000000b0;
 }
 
-.img {
+/* .img {
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+.img2{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+} */
+.imagesize {
   margin-top: 16px;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imagesize #grade {
+  margin-top: 22px;
+  width: 60%;
 }

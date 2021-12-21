@@ -1,6 +1,15 @@
 <view class="page">
-  <view class="title">实验介绍</view>
-  <view class="title">和机器人对视，选择是否撞车</view>
+  <view class="title"  style="font-family:sans-serif;font-size:30px;">实验介绍</view>
+  <view class="body" id="main">在本次实验中，你需要观察机器人的行为，然后操作汽车选择是否避让。你的目标是让自己的得分最高。</view>
 
-  <image class="img" src="../../images/crash.gif"></image>
+  <view class='imagesize'>
+    <image class="img" src="../../images/robots.png" mode="widthFix" ></image>
+  </view>
+  <view class="body" id="intro">机器人行为</view>
+
+  <view class='imagesize'>
+    <image class="img2" id="grade" src="../../images/grade.png" mode="widthFix"></image>
+  </view>
+  <view class="body" id="intro">得分表</view>
+
 </view>
