@@ -1,7 +1,7 @@
 <view>
-  <view class="top_tip">请选择是否避让22222</view>
+  <view class="top_tip">请选择是否避让</view>
   <image class="img" src="../../images/robot_avert.png"></image>
-  <view class="tip">Big brother is watching you!</view>
+  <view class="tip">Big brother is watching somewhere else.</view>
   <view class="ght">
     <view class="button" bindtap="Avoiding">避让</view>
     <view class="button" bindtap="NotAvoiding">不避让</view>

@@ -14,6 +14,7 @@ exports.main = async (event, context) => {
       // data 字段表示需新增的 JSON 数据
       data: {
         robot:event.robot,
+        robotAction:event.robotAction,
         human:event.human,
         result:event.result
       }

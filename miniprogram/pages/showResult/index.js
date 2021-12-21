@@ -17,17 +17,14 @@ Page({
       console.log(rand1);
 
       if (rand1 < 0.5) {
-        wx.navigateTo({
+        wx.redirectTo({
           url: `/pages/experiment/index?envId=jimmy-gao-622a98`,
         });
       } else {
-        wx.navigateTo({
+        wx.redirectTo({
           url: `/pages/experiment2/index?envId=jimmy-gao-622a98`,
         });
       }
-    wx.navigateTo({
-      url: `/pages/experiment/index?envId=jimmy-gao-622a98`,
-    });
   },
 
 });

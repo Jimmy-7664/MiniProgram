@@ -25,9 +25,9 @@ Page({
     //   // }
     // ]
     // }, {
-      title: '实验',
+      title: '实验部分',
       tip: 'Mutual gaze with a robot affects human neural activity and delays decision-making processes',
-      showItem: false,
+      showItem: true,
       item: [{
         title: '实验介绍',
         page: 'createCollection',
@@ -118,25 +118,25 @@ Page({
       console.log(rand1);
 
       if (rand1 < 0.5) {
-        wx.navigateTo({
+        wx.redirectTo({
           url: `/pages/${e.currentTarget.dataset.page.page[0]}/index?envId=${this.data.selectedEnv.envId}`,
         });
       } else {
-        wx.navigateTo({
+        wx.redirectTo({
           url: `/pages/${e.currentTarget.dataset.page.page[1]}/index?envId=${this.data.selectedEnv.envId}`,
         });
       }
 
     } else {
-      wx.navigateTo({
-        url: `/pages/${e.currentTarget.dataset.page}/index?envId=${this.data.selectedEnv.envId}`,
+      wx.redirectTo({
+        url: `/pages/${e.currentTarget.dataset.page.page}/index?envId=${this.data.selectedEnv.envId}`,
       });
     }
 
   },
   jumpPage2(e) {
     console.log(e);
-    wx.navigateTo({
+    wx.redirectTo({
       url: `/pages/${e.currentTarget.dataset.page[1]}/index?envId=${this.data.selectedEnv.envId}`,
     });
   },

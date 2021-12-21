@@ -39,12 +39,11 @@ Page({
     });
   },
   exit(){
-    wx.navigateTo({
+    wx.redirectTo({
       url: `/pages/index/index`,
     });
   },
   Create(e){
-
     wx.showLoading({
       title: '',
     });
@@ -72,31 +71,15 @@ Page({
     });
   },
   Avoiding(e) {
-    wx.cloud.callFunction({
-      name: 'quickstartFunctions',
-      config: {
-        env: this.data.envId
-      },
-      data: {
-        type: 'addRecord',
-        robot: '注视',
-        human: '避让',
-        result: 'crash'
-      }
-    }).then((resp) => {
-      wx.hideLoading();
-    }).catch((e) => {
-      console.log(e);
-      this.setData({
-        showUploadTip: true
-      });
-      wx.hideLoading();
-    });
-    wx.navigateTo({
-      url: `/pages/showResult/index?envId=jimmy-gao-622a98`,
-    });
-  },
-  NotAvoiding() {
+    let rand1=Math.random();
+    let avoidFlag=false;
+    if(rand1<=0.7){
+      avoidFlag=true;
+    }
+    let robotAction="不避让";
+    if(avoidFlag){
+      robotAction="避让";
+    }
     wx.cloud.callFunction({
       name: 'quickstartFunctions',
       config: {
@@ -105,7 +88,8 @@ Page({
       data: {
         type: 'addRecord',
         robot: '不注视',
-        human: '不避让',
+        robotAction:robotAction,
+        human: '避让',
         result: 'safe'
       }
     }).then((resp) => {
@@ -117,8 +101,53 @@ Page({
       });
       wx.hideLoading();
     });
-    wx.navigateTo({
-      url: `/pages/showResult2/index?envId=jimmy-gao-622a98`,
+    console.log(e);
+    wx.redirectTo({
+      url: `/pages/showResult2/index?envId=jimmy-gao-622a98&type=2&avoid=${avoidFlag}&human=true`,
     });
+  },
+  NotAvoiding() {
+    let rand1=Math.random();
+    let avoidFlag=false;
+    let result='crash';
+    if(rand1<=0.7){
+      avoidFlag=true;
+      result='safe';
+    }
+    let robotAction="不避让";
+    if(avoidFlag){
+      robotAction="避让";
+    }
+    wx.cloud.callFunction({
+      name: 'quickstartFunctions',
+      config: {
+        env: this.data.envId
+      },
+      data: {
+        type: 'addRecord',
+        robot: '不注视',
+        robotAction:robotAction,
+        human: '不避让',
+        result: result
+      }
+    }).then((resp) => {
+      wx.hideLoading();
+    }).catch((e) => {
+      console.log(e);
+      this.setData({
+        showUploadTip: true
+      });
+      wx.hideLoading();
+    });
+    console.log(avoidFlag);
+    if(!avoidFlag){
+      wx.redirectTo({
+        url: `/pages/showResult/index?envId=jimmy-gao-622a98&type=1&avoid=${avoidFlag}&human=false`,
+      });
+    }else{
+    wx.redirectTo({
+      url: `/pages/showResult2/index?envId=jimmy-gao-622a98&type=2&avoid=${avoidFlag}&human=false`,
+    });
+  }
   },
 });
